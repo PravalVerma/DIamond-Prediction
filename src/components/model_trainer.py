@@ -71,7 +71,7 @@ class ModelTrainer:
 
             if best_model_score < 0.6 :
                 logging.info('Best model has r2 Score less than 60%')
-                raise CustomException('No Best Model Found')
+                raise CustomException('No Best Model Found', sys)
             
             print(f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}')
             print('\n====================================================================================\n')
@@ -88,7 +88,7 @@ class ModelTrainer:
                           'iterations'    : [300,400,500,600]}
 
             #Instantiate RandomSearchCV object
-            rscv = RandomizedSearchCV(cbr , param_dist, scoring='r2', cv =5, n_jobs=-1)
+            rscv = RandomizedSearchCV(cbr , param_dist, scoring='r2', cv =5, n_jobs=-1)  # type: ignore
 
             # Fit the model
             rscv.fit(xtrain, ytrain)

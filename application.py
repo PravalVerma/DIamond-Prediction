@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template,jsonify
 from flask_cors import CORS,cross_origin
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
+import webbrowser, threading, time
 
 application = Flask(__name__)
 
@@ -61,5 +62,11 @@ def predict_api():
         dct = {'price':round(pred[0],2)}
         return jsonify(dct)
 
+
+
 if __name__ == '__main__':
+    def _open_browser():
+        time.sleep(1)
+        webbrowser.open('http://127.0.0.1:8000')
+    threading.Thread(target=_open_browser).start()
     app.run(host='0.0.0.0', port=8000)
