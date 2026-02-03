@@ -1,21 +1,21 @@
-"""
-This is for running locally 
-numpy==1.26.4
-pandas
-matplotlib
-seaborn
-scikit-learn==1.3.2
-ipykernel
-catboost
-xgboost
-dill
-flask
-flask_cors
-lime
-gunicorn
+
+# This is for running locally 
+# numpy==1.26.4
+# pandas
+# matplotlib
+# seaborn
+# scikit-learn==1.3.2
+# ipykernel
+# catboost
+# xgboost
+# dill
+# flask
+# flask_cors
+# lime
+# gunicorn
 #-e .
 
-"""
+
 
 # This is for render.com deployment 
 
