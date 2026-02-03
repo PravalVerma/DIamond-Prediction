@@ -1,4 +1,6 @@
-numpy>=1.26.4
+"""
+This is for running locally 
+numpy==1.26.4
 pandas
 matplotlib
 seaborn
@@ -10,4 +12,24 @@ dill
 flask
 flask_cors
 lime
+gunicorn
 #-e .
+
+"""
+
+# This is for render.com deployment 
+
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+seaborn==0.13.2
+scikit-learn==1.3.2
+
+catboost==1.2.8
+xgboost==2.1.4
+dill==0.4.0
+lime==0.2.0.1
+
+flask==3.0.3
+flask_cors==4.0.1
+gunicorn==22.0.0
